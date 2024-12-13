@@ -7,7 +7,7 @@ const Dashboard = ({isAuth}) => {
   let navigate = useNavigate()
   useEffect(() => {
 
-    if (!isAuth)
+    if (isAuth != true)
         navigate('/signup')
 }, [isAuth])
   return (
