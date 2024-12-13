@@ -41,6 +41,9 @@ li {
     height: 100%;
     position: fixed;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 .sidebar .logo {
@@ -120,10 +123,9 @@ li {
 }
 
 .sidebar button {
+    bottom: 0;
     width: 80%;
     margin: 20px;
-    margin-top: 130px;
- 
     padding: 12px;
     background-color: #A4E8F7;
     color: black;
@@ -138,7 +140,9 @@ li {
     padding: 10px;
 }
 
-
+@media screen and (max-width:855px) {
+    .sidebar { overflow:scroll;}
+}
 
 /* form */
 
