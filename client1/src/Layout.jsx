@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Link, Outlet, useNavigate } from 'react-router-dom';
-import "../src/Layout.css"
 
 
 
@@ -11,6 +10,11 @@ const Layout = ({ isAuth }) => {
     const toggleDropdown = () => {
         setIsDropdownVisible(isDropdownVisible ? false : true);
     };
+
+    const logout=()=>{
+        localStorage.removeItem('auth')
+        navigate('/signup')
+    }
 
     return (
         <>
@@ -27,6 +31,7 @@ const Layout = ({ isAuth }) => {
                         <Link to="/Details"><li>Details</li></Link>
                     </ul>
                 </div>
+                <div><button onClick={logout}>logout</button></div>
             </div>
             <a className="toggle-btn" onClick={toggleDropdown}>
                 {isDropdownVisible ? <i class="fa-solid fa-bars fa-1x toogleicon" ></i> : <i class="fa-solid fa-bars fa-1x toogleicon" ></i>}
@@ -42,8 +47,10 @@ const Layout = ({ isAuth }) => {
                             <a href="/ConnectionAggrement"><li>Connection Agreement</li></a>
                             <a href="/ModelAgreement"><li>Model Agreement</li></a>
                             <a href="/Details"><li>Details</li></a>
+                            <button onClick={logout}>logout</button>
                         </ul>
                     </div>
+                  
                 </div>
             )}
             <Outlet />

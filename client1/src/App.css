@@ -119,6 +119,27 @@ li {
     margin: 5px 0;
 }
 
+.sidebar button {
+    width: 80%;
+    margin: 20px;
+    margin-top: 130px;
+ 
+    padding: 12px;
+    background-color: #A4E8F7;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sidebar .logout-wrapper {
+    margin-top: auto;  
+    padding: 10px;
+}
+
+
+
 /* form */
 
 form,
